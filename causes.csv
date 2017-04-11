@@ -1,0 +1,5 @@
+Causes,,,,,,,,
+,"move-to(obj, dest, dx, dy, dz, da)",causes,grasp(obj),"release(obj, dest, dx, dy, dz, da)",,,,
+,"stack(dest, dx, dy, dz, da, obj)",causes,"move-to(obj, dest, dx, dy, dz, da)",if,type(obj)=block,,,
+,"stack(dest, dx, dy, dz, da, obj1, obj2, obj3, CONT-3)",causes,"move-to(obj, dest, dx, dy, dz, da)","stack(obj1, 0, 0, 0.5, 0, obj2, obj3, CONT-2)",if,type(obj1)=block,and,obj=obj1
+,"stack-all(dx, dy, dz, da)",causes,"stack(dest, dx, dy, dz, da, obj1, obj2, obj3, CONT-3)",if,"all(block)=obj1, obj2, obj3, CONT-3",and,dest='room',
